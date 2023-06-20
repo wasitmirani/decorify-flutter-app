@@ -1,4 +1,6 @@
 import 'package:decorify/utils/constants.dart';
+import 'package:decorify/widgets/heading_widget.dart';
+import 'package:decorify/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -62,31 +64,34 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             0.2, // 20% of screen width
                       ),
                     ),
-                    const SizedBox(height: 30),
-                    const Padding(
+                    const SizedBox(height: 20),
+                    Padding(
+                      // ignore: prefer_const_constructors
                       padding: EdgeInsets.all(8.0),
+                      child: headingWidget(app_name.toString()),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8),
                       child: Positioned(
-                        top: 20,
-                        left: 20,
-                        child: Text(
-                          'Hello',
-                          style: heading_text_style,
-                        ),
-                      ),
+                          child: Text(app_message.toString(),
+                              style: sub_heading_text_style)),
                     ),
                   ],
                 ),
               ),
             ),
 
-            Positioned(
-              bottom: 20,
-              right: 20,
-              child: FloatingActionButton(
-                onPressed: () {
-                  // Perform actions when the button is pressed
-                },
-                child: const Text('Button'),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: PrimaryButton(
+                  text: 'Get Started',
+                  onPressed: () {
+                    // Handle button press
+                    print('Button pressed!');
+                  },
+                ),
               ),
             ),
             // Add more widgets as needed
