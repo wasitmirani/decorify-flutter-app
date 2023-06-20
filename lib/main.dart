@@ -11,18 +11,16 @@ class MyApp extends StatefulWidget {
 
   @override
   State<MyApp> createState() => _MyAppState();
-
- 
 }
 
 class _MyAppState extends State<MyApp> {
   static bool is_debug = false;
-  void appMode(val){
-      setState(() {
+  void appMode(val) {
+    setState(() {
       is_debug = val;
     });
-  
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

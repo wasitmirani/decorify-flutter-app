@@ -1,6 +1,6 @@
 import 'package:decorify/utils/constants.dart';
 import 'package:decorify/widgets/heading_widget.dart';
-import 'package:decorify/widgets/primary_button.dart';
+import 'package:decorify/widgets/myelevated_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -81,16 +81,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: PrimaryButton(
-                  text: 'Get Started',
-                  onPressed: () {
-                    // Handle button press
-                    print('Button pressed!');
-                  },
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: MyElevatedButton(
+                    width: double.infinity,
+                    onPressed: () {},
+                    borderRadius: BorderRadius.circular(20),
+                    child: const Text('Get  Started'),
+                  ),
                 ),
               ),
             ),

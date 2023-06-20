@@ -23,4 +23,5 @@ const app_name = "Decorify";
 const app_message = "Decor the dreams with wood beauty";
 
 // ignore: constant_identifier_names
-const button_primary_color = 0xFF0a0a09;
+const primary_color = 0xFF049b263;
+const secondary_color = 0xFF6ad88a;
